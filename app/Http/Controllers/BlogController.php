@@ -12,4 +12,8 @@ class BlogController extends Controller
     $posts=Post::SimplePaginate(2);
     return view('index',['posts'=>$posts]);
   }
+  public function show($slug){
+    $post=Post::findBySlug($slug);
+    return view('post.show',['post'=>$post]);
+  }
 }

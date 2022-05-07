@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'App\Http\Controllers\BlogController@index');
-
+Route::get('/post/{slug}', 'App\Http\Controllers\BlogController@show');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

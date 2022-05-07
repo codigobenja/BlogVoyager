@@ -1,5 +1,5 @@
 <div class="post-preview">
-    <a href="post.html">
+    <a href="/post/{{$post->slug}}">
         <h2 class="post-title">{{$post->title}}</h2>
         <h3 class="post-subtitle">{{$post->excerpt}}</h3>
     </a>
